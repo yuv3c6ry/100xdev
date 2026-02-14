@@ -6,7 +6,22 @@
 */
 
 function findLargestElement(numbers) {
-    
+    let large = numbers[0]
+//   for (let a = 0; a < numbers.length; a++) {
+//       if(large<numbers[a]){
+//         large = numbers[a]
+//       }
+//   }
+//   return large
+
+    numbers.forEach(element => {
+         if(large<element){
+            large = element
+         }
+    });
+    return large
 }
+const a = findLargestElement([2.3, 4, 3, 2, 5]);
+console.log(a);
 
 module.exports = findLargestElement;
