@@ -6,7 +6,15 @@
 */
 
 function countVowels(str) {
-    // Your code here
-}
+  let checkpoint = ["a", "e", "i", "o", "u",'A', 'E', 'I', 'O', 'U'];
+  let count =0;
+    str.split('').forEach((e)=>{
+      if(checkpoint.includes(e)){
+       count= count+1;
+      }
+    });
+    return count;
+};
+countVowels("nimuname")
 
 module.exports = countVowels;
