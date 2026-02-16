@@ -4,7 +4,7 @@
 */
 
 function isPalindrome(str) {
-    // Normalize the string: convert to lowercase and remove non-alphanumeric characters
+    // Normalize the string: convert to lowercase and remove non-alphanumeric character
     let filteredStr = '';
     for (let char of str) {
         if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z') || (char >= '0' && char <= '9')) {
@@ -19,7 +19,7 @@ function isPalindrome(str) {
     while (left < right) {
         if (filteredStr[left] !== filteredStr[right]) {
             return false;
-        }
+        }     
         left++;
         right--;
     }
