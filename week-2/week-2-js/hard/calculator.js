@@ -16,6 +16,46 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
-   
+class Calculator {
+  constructor(result) {
+    this.result = 0; // this is what like what mistak i do is lik aj ke bad se now i say like that
+  }
+
+  add(number) {
+    return (this.result = this.result + number);
+  }
+
+  subtract(number) {
+    return (this.result = this.result - number);
+  }
+  multiply(number) {
+    return (this.result = this.result * number);
+  }
+  divide(number) {
+    if (Number(number) === 0) {
+      throw new Error("Error");
+    }
+    return (this.result = this.result / number);
+  }
+
+  clear() {
+    return (this.result = 0);
+    12;
+  }
+  getResult() {
+    return this.result;
+  }
+  calculate(input) {
+    if (eval(input) === Infinity) {
+      throw new Error("Error");
+    }
+    let inpudt = input.replace(/\s+/g, "");
+    let resultt = eval(inpudt);
+    return (this.result = this.result + resultt);
+  }
+  // thrw an errorr tos hso wt
+}
+const ak = new Calculator();
+console.log(ak.calculate("2+3*4"));
+
 module.exports = Calculator;
